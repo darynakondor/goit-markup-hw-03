@@ -12,10 +12,28 @@
   --footer-text-color: #e7e9fc;
 }
 
+h1,h2,h3,h4,h5,h6,p,ul {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--second-title-color);
   font-size: 16px;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .list {
@@ -32,6 +50,21 @@ body {
   cursor: pointer;
 }
 
+.header {
+  padding: 24px 0;
+  border-bottom: 1px solid #E7E9FC;
+}
+
+.header .container, .menu-list, .contacts-list, .advantages .list, .projects .list, .team .list {
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -43,8 +76,25 @@ body {
   text-decoration: none;
 }
 
+.navigation .logo {
+  margin-right: 76px;
+}
+
 .part-logo {
   color: var(--link-color-blue);
+}
+
+.menu-list .list-item, .contacts-list .list-item {
+  margin-right: 40px;
+}
+
+.menu-list .list-item:last-child,
+.contacts-list .list-item:last-child, 
+.advantages .list-item:last-child,
+.projects .list-item:last-child,
+.team .list-item:last-child, 
+.portfolio .btns-list .list-item:last-child {
+  margin-right: 0;
 }
 
 .menu-list .link {
@@ -67,16 +117,18 @@ body {
 }
 
 .solutions {
+  padding: 188px 0;
   background: var(--bg-color-dark);
+  text-align: center;
 }
 
 .solutions .title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-white);
+  margin-bottom: 48px;
 }
 
 .solutions .btn {
@@ -90,7 +142,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--color-white);
-  cursor: pointer;
+  padding: 0;
 }
 
 .solutions .btn:hover,
@@ -111,7 +163,29 @@ body {
   overflow: hidden;
 }
 
-.advantages .title,
+.advantages {
+  padding-top: 120px;
+}
+
+.advantages .list-item {
+  width: 264px;
+}
+
+.advantages .list-item, .projects .list-item, .team .list-item, .portfolio .list-item {
+  margin-right: 24px;
+}
+
+.advantages .list-item:last-child,
+.projects .list-item:last-child,
+.team .list-item:last-child, .portfolio .list-item:last-child {
+  margin-right: 0;
+}
+
+.advantages .list .title {
+  margin-bottom: 8px;
+}
+
+.advantages .list .title,
 .team .list .title,
 .portfolio-list .title {
   font-weight: 500;
@@ -126,6 +200,10 @@ body {
   color: var(--text-color);
 }
 
+.projects {
+  padding: 120px 0;
+}
+
 .projects .title,
 .team .title {
   font-weight: 700;
@@ -134,23 +212,38 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .team {
   background: var(--bg-color-light);
+  padding: 120px 0;
 }
 
-.team .list .title {
-  text-align: center;
-}
-
-.team .text {
+.team .caption {
+  background: var(--color-white);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  padding: 32px 0;
   text-align: center;
 }
 
 .team .list-item {
-  background: var(--color-white);
-  width: 264px;
+  background-color: #fff;
+}
+
+.team .list .title {
+  margin-bottom: 8px;
+}
+
+.portfolio {
+  padding: 96px 0 120px;
+}
+
+.portfolio .btns-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
 }
 
 .portfolio .btn {
@@ -162,10 +255,12 @@ body {
   text-align: center;
   letter-spacing: 0.04em;
   color: var(--btn-color);
+  padding: 12px 24px;
 }
 
 .portfolio .btn:hover,
-.portfolio .btn:focus, .portfolio .current {
+.portfolio .btn:focus,
+.portfolio .current {
   border: 1px solid var(--btn-color);
   background: var(--btn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
@@ -173,8 +268,40 @@ body {
   color: var(--color-white);
 }
 
+.portfolio .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio .portfolio-list .list-item {
+  margin-bottom: 48px;
+}
+
+.portfolio .portfolio-list .list-item:nth-child(n + 7) {
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-list .list-item:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-list .title {
+  margin-bottom: 8px;
+}
+
+.portfolio .caption {
+  padding: 32px 0 32px 16px;
+  border: 1px solid #E7E9FC;
+  border-top: none;
+}
+
 .footer {
   background: var(--bg-color-dark);
+  padding: 100px 0;
+}
+
+.footer .content {
+  width: 264px;
 }
 
 .footer .logo {
@@ -184,4 +311,5 @@ body {
 
 .footer .text {
   color: var(--footer-text-color);
+  margin-top: 16px;
 }
