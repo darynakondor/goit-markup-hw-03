@@ -133,8 +133,6 @@ body {
 
 .solutions .btn {
   border: none;
-  width: 170px;
-  height: 51px;
   background: var(--btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -142,7 +140,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--color-white);
-  padding: 0;
+  padding: 16px 32px;
 }
 
 .solutions .btn:hover,
@@ -168,7 +166,7 @@ body {
 }
 
 .advantages .list-item {
-  flex-basis: calc(25% - 18px);
+  flex-basis: calc(100% - 18px);
 }
 
 .advantages .list-item, .projects .list-item, .team .list-item, .portfolio .list-item {
@@ -226,10 +224,6 @@ body {
   border-radius: 0px 0px 4px 4px;
   padding: 32px 0;
   text-align: center;
-}
-
-.team .list-item {
-  background-color: #fff;
 }
 
 .team .list .title {
