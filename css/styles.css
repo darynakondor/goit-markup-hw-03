@@ -166,7 +166,7 @@ body {
 }
 
 .advantages .list-item {
-  flex-basis: calc(100% - 18px);
+  flex-basis: calc(25% - 18px);
 }
 
 .advantages .list-item, .projects .list-item, .team .list-item, .portfolio .list-item {
