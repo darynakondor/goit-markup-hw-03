@@ -127,18 +127,18 @@ body {
 }
 
 .solutions {
-  padding: 188px 0;
   background: var(--bg-color-dark);
   text-align: center;
+  padding: 188px 0;
 }
 
 .solutions .title {
-  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--color-white);
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
+  width: 495.05px;
 }
 
 .solutions .btn {
@@ -214,7 +214,6 @@ body {
 
 .projects .title,
 .team .title {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -310,6 +309,7 @@ body {
 
 .footer .logo {
   display: block;
+  width: 115px;
   line-height: 1.17;
   color: var(--footer-logo-color);
   margin-bottom: 16px;
